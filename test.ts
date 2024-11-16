@@ -4,9 +4,8 @@ import {CreatePetInStore, PetSmartController} from "./controllers/PetSmartContro
 describe('Тесты для добавления животных в магазин', () => {
     test('Добавляем собаку только собязательным параметрами', async () => {
 
-        const res: CreatePetInStore  = await new PetSmartController().addNewPetInStore({name: 'Стич'});
+        const res: CreatePetInStore  = await new PetSmartController().posAddNewPetInStore({name: 'Стич'});
         expect(res.name).toBe('Стич')
     });
 });
-
 
